@@ -5,8 +5,7 @@ workbench like mine.
 
 ## Gnome Shell extensions
 
-- [Static workspaces]
-  (https://extensions.gnome.org/extension/12/static-workspaces/)
+- [Static workspaces](https://extensions.gnome.org/extension/12/static-workspaces/)
 - [Bottom panel](https://extensions.gnome.org/extension/3/bottom-panel/)
 
 ## Applications
