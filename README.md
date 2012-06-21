@@ -9,9 +9,8 @@ This repository contains instructions on how to setup a workbench like mine.
 
 ## Applications
 
-### Repository
-1. Git
-2. Google Chrome
-3. Guake
-4. Zsh
-5. oh-my-zsh
+1. [Git](http://git-scm.com/)
+2. [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+3. [Guake](http://guake.org/)
+4. [Zsh](http://www.zsh.org/)
+5. [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)
