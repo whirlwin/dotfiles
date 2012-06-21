@@ -1,4 +1,4 @@
-# Computer setup
+# Init
 
 This repository contains information on what is needed in order to setup a
 workbench like mine.
