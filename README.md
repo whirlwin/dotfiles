@@ -5,11 +5,17 @@ workbench like mine.
 
 ## Applications
 
+### Core
+
 1. [Git](http://git-scm.com/)
 2. [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
 3. [Guake](http://guake.org/)
 4. [Zsh](http://www.zsh.org/)
 5. [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)
+
+### Development
+
+Coming soon...
 
 ## Gnome Shell extensions
 
