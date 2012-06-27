@@ -12,16 +12,27 @@ workbench like mine.
 3. [Guake](http://guake.org/)
 4. [Zsh](http://www.zsh.org/)
 5. [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)
+6. [Vim](http://www.vim.org/download.php)
 
 ### Development
 
+#### General
+
+1. [Eclipse](http://www.eclipse.org/downloads/)
+
 #### Java
 
-Coming soon...
+1. [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+3. [Apache Tomcat](http://tomcat.apache.org/)
+
+#### Android
+
+1. [Android SDK](http://developer.android.com/sdk/index.html)
 
 #### Ruby
 
-Coming soon...
+1. [GCC](http://gcc.gnu.org/)
+2. [RVM](https://rvm.io/rvm/install/)
 
 ## Gnome Shell extensions
 
