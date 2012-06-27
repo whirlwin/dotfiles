@@ -1,6 +1,7 @@
 set cc=81
+set et
 set list
-set listchars=tab:>-
-set listchars=trail:.
+set lcs=tab:>-
+set lcs=trail:.
 set nu
 set sts=4
