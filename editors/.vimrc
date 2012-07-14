@@ -4,4 +4,4 @@ set list
 set lcs=tab:>-
 set lcs=trail:.
 set nu
-set sts=4
+set sts=2
