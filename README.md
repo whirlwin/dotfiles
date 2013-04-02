@@ -19,4 +19,5 @@ Disable tab path name:
 ### Vim
 
 #### Plugins
-- [Jade syntax and indenting](http://www.vim.org/scripts/script.php?script_id=3192)
+- [Jade support](http://www.vim.org/scripts/script.php?script_id=3192)
+- [CoffeeScript support](http://www.vim.org/scripts/script.php?script_id=3590)
