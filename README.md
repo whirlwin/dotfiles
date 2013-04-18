@@ -21,3 +21,4 @@ Disable tab path name:
 #### Plugins
 - [CoffeeScript support](http://www.vim.org/scripts/script.php?script_id=3590)
 - [Jade support](http://www.vim.org/scripts/script.php?script_id=3192)
+- [Stylus support](http://www.vim.org/scripts/script.php?script_id=3513)
