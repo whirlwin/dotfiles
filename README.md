@@ -14,6 +14,9 @@ workbench like mine.
 Disable tab path name:
 >     gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
 
+### oh-my-zsh
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
 ## Editors
 
 ### Vim
