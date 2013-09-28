@@ -1,7 +1,7 @@
 # Init
 
-This repository contains information on what is needed in order to setup a
-workbench like mine.
+This repository contains information on what is needed in order to setup my
+workbench.
 
 ## Core
 
@@ -14,14 +14,14 @@ workbench like mine.
 Disable tab path name:
 >     gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
 
-### oh-my-zsh
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+### xclip
+Add the following to .zshrc:
+>     alias 'xclip'='xclip -selection clipboard'
 
 ## Editors
 
-### Vim
+### Vim plugins
 
-#### Plugins
 - [CoffeeScript support](http://www.vim.org/scripts/script.php?script_id=3590)
 - [Jade support](http://www.vim.org/scripts/script.php?script_id=3192)
 - [Stylus support](http://www.vim.org/scripts/script.php?script_id=3513)
