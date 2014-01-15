@@ -1,5 +1,6 @@
-alias 'xclip'='xclip -selection clipboard'
+alias 'mci'='maven clean install'
 alias 'untar'='tar xzvf'
+alias 'xclip'='xclip -selection clipboard'
 
 # Kill a process on a specific port
 function portkill() {
