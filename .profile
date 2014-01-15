@@ -1,4 +1,4 @@
-alias 'mci'='maven clean install'
+alias 'mci'='mvn clean install'
 alias 'untar'='tar xzvf'
 alias 'xclip'='xclip -selection clipboard'
 
