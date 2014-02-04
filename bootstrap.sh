@@ -6,7 +6,10 @@ sudo yum update
 # Download Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -O $GOOGLE_CHROME
 
-sudo yum install -y git vim zsh xclip guake maven nodejs $GOOGLE_CHROME
+sudo yum install -y git vim zsh xclip guake maven nodejs mongodb mongodb-server $GOOGLE_CHROME
+
+# Disable long names for terminal tabs
+gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
 
 # Download and install oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh

@@ -3,24 +3,15 @@
 This repository contains information on what is needed in order to set up my
 workbench.
 
-## Core
+## Gnome Shell extensions
 
-### Gnome Shell extensions
-
+Option 1:
 - [Static workspaces](https://extensions.gnome.org/extension/484/workspace-grid/)
 
-### Guake
+Option 2:
+- [Frippery Bottom Panel](https://extensions.gnome.org/extension/3/bottom-panel/)
 
-Disable tab path name:
->     gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
-
-### xclip
-Add the following to .zshrc:
->     alias 'xclip'='xclip -selection clipboard'
-
-## Editors
-
-### Vim plugins
+## Vim plugins
 
 - [CoffeeScript support](http://www.vim.org/scripts/script.php?script_id=3590)
 - [Jade support](http://www.vim.org/scripts/script.php?script_id=3192)
