@@ -21,6 +21,9 @@ sudo chsh -s /usr/bin/zsh whirlwin
 wget https://raw2.github.com/whirlwin/init/master/.profile -O ~/.profile
 echo "source ~/.profile" >> ~/.zshrc
 
+# Import .gitignore_gloal
+wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global
+
 # Initalize Vim
 wget https://raw2.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc
 
