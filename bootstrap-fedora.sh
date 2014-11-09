@@ -1,5 +1,3 @@
-# Tested on Fedora exclusively
-
 GOOGLE_CHROME="google-chrome.rpm"
 
 # Make sure the system is up to date
