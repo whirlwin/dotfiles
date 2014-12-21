@@ -12,7 +12,7 @@ sudo yum install -y git vim zsh xclip guake alacarte maven nodejs mongodb mongod
 gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
 
 # Download and install oh-my-zsh
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+curl -L http://install.ohmyz.sh | sh
 sudo chsh -s /usr/bin/zsh whirlwin
 
 # Import .profile
