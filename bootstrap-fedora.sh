@@ -1,19 +1,21 @@
+sudo su
+
 GOOGLE_CHROME="google-chrome.rpm"
 
 # Make sure the system is up to date
-sudo yum update
+yum update
 
 # Download Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -O $GOOGLE_CHROME
 
-sudo yum install -y git vim zsh xclip guake alacarte maven nodejs mongodb mongodb-server $GOOGLE_CHROME
+yum install -y git vim zsh xclip guake alacarte maven nodejs mongodb mongodb-server $GOOGLE_CHROME
 
 # Disable long names for terminal tabs
 gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false
 
 # Download and install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
-sudo chsh -s /usr/bin/zsh whirlwin
+chsh -s /usr/bin/zsh whirlwin
 
 # Import .profile
 wget https://raw2.github.com/whirlwin/init/master/.profile -O ~/.profile
