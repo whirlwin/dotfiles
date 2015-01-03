@@ -3,7 +3,7 @@ sudo su
 GOOGLE_CHROME="google-chrome.rpm"
 
 # Make sure the system is up to date
-yum update
+yum update -y
 
 # Download Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -O $GOOGLE_CHROME
