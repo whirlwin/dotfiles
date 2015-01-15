@@ -1,5 +1,3 @@
-sudo su
-
 GOOGLE_CHROME="google-chrome.rpm"
 
 # Make sure the system is up to date
@@ -18,14 +16,14 @@ curl -L http://install.ohmyz.sh | sh
 chsh -s /usr/bin/zsh whirlwin
 
 # Import .profile
-wget https://raw2.github.com/whirlwin/init/master/.profile -O ~/.profile
-echo "source ~/.profile" >> ~/.zshrc
+wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile
 
-# Import .gitignore_gloal
+# Configure git
 wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global
+git config core.editor vim
 
-# Initalize Vim
-wget https://raw2.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc
+# Configure Vim
+wget https://raw.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc
 
 # Create directory structures
 mkdir ~/Projects
