@@ -5,6 +5,8 @@ yum update -y
 yum install -y git
 wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global
 git config core.editor vim
+git config --global push.default simple
+
 
 # Configure Google Chrome
 GOOGLE_CHROME="google-chrome.rpm"
