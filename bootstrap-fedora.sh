@@ -13,7 +13,7 @@ yum install -y $GOOGLE_CHROME
 rm $GOOGLE_CHROME
 
 # Misc
-yum install -y alacarte maven nodejs mongodb mongodb-server
+yum install -y alacarte maven nodejs npm mongodb mongodb-server
 wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile
 mkdir ~/Projects
 
