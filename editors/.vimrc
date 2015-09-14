@@ -1,4 +1,4 @@
-set cc=81
+set cc=121
 set et
 set list
 set lcs=tab:>-
