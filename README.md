@@ -3,7 +3,7 @@ This repository contains information on what is needed in order to set up my
 workbench.
 
 ## Basic programs
-    git vim wget xclip zsh
+    git nodejs npm vim wget xclip xdg-utils zsh
 
 ## Shell
 1. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
