@@ -16,9 +16,13 @@ workbench.
 3. Configure email: `git config user.email <email address>`
 
 # Configure Vim
-1. Configure .vimrc: `wget https://raw.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc`
+1. Install .vimrc: `wget https://raw.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc`
 2. Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 3. Install plugins: `vim +PluginInstall +qall`
+
+# Configure .profile
+1. Install .profile: `wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile`
+2. Source .profile from .zshrc: `sed -i '1isource ~/.profile' ~/.zshrc`
 
 ## Gnome Shell extensions
 Option 1:
