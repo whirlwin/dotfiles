@@ -24,6 +24,9 @@ workbench.
 1. Install .profile: `wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile`
 2. Source .profile from .zshrc: `sed -i '1isource ~/.profile' ~/.zshrc`
 
+# Configure misc
+1. Make Guake tab names suck less: `gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false`
+
 ## Gnome Shell extensions
 Option 1:
 - [Static workspaces](https://extensions.gnome.org/extension/484/workspace-grid/)
