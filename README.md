@@ -10,9 +10,7 @@ workbench.
 2. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## Git
-1. Configure global gitignore: `wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global`
-2. Configure username: `git config user.name whirlwin`
-3. Configure email: `git config user.email <email address>`
+Run: `./init-git.sh <email address>`
 
 # Vim
 1. Install .vimrc: `wget https://raw.github.com/whirlwin/init/master/editors/.vimrc -O ~/.vimrc`
