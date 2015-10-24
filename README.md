@@ -3,12 +3,12 @@ This repository contains information on what is needed in order to set up my
 workbench.
 
 ## Basic programs
-    git nodejs npm vim wget xclip xdg-utils zsh
+    autojump git nodejs npm vim wget xclip xdg-utils zsh
 
 ## Shell
 1. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 2. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-3. Enable Oh My Zsh plugins: `plugins=(git mvn colorize node zsh-syntax-highlighting)` in `~/.zshrc`
+3. Enable Oh My Zsh plugins: `plugins=(autojump colorize git mvn node zsh-syntax-highlighting)` in `~/.zshrc`
 
 ## Configure Git
 1. Configure global gitignore: `wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global`
