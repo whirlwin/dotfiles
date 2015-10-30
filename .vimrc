@@ -5,7 +5,6 @@ set lcs=tab:>-
 set lcs=trail:.
 set nu
 set sts=2
-
 set nocompatible
 filetype off
 

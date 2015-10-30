@@ -18,8 +18,7 @@ Run: `./init-git.sh <email address>`
 3. Install plugins: `vim +PluginInstall +qall`
 
 # .profile
-1. Install .profile: `wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile`
-2. Source .profile from .zshrc: `sed -i '1isource ~/.profile' ~/.zshrc`
+Run: `./init-profile.sh`
 
 # Misc
 1. Make Guake tab names suck less: `gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false`
