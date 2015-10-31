@@ -2,6 +2,7 @@
 
 #Configure global gitignore
 wget https://raw.githubusercontent.com/whirlwin/init/master/.gitignore_global -O ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 # Configure username and email:
 git config --global user.name whirlwin
