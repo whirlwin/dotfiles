@@ -3,6 +3,8 @@ This repository contains information on what is needed in order to set up my
 workbench.
 
 ## Basic programs
+Install the following programs on the new platform:
+
     autojump git nodejs npm vim wget xclip xdg-utils zsh
 
 ## Shell
