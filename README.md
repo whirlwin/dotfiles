@@ -7,6 +7,8 @@ Install the following programs on the new platform:
 
     autojump git nodejs npm vim wget xclip xdg-utils zsh
 
+- [autojump](https://github.com/wting/autojump)
+
 ## Shell
 1. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 2. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
