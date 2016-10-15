@@ -1,6 +1,6 @@
 #!/bin/sh
 
-wget https://raw.github.com/whirlwin/init/master/.profile -O ~/.profile
+cp .profile ~/
 
 sed -i '1isource ~/.profile' ~/.zshrc
 
