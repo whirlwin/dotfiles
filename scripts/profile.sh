@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cp .profile ~/
+cp -f ../.profile ~/
 
 sed -i '1isource ~/.profile' ~/.zshrc
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Configure global gitignore
-cp -f .gitignore_global ~/
+cp -f ../.gitignore_global ~/
 git config --global core.excludesfile ~/.gitignore_global
 
 # Configure username and email:
