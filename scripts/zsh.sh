@@ -2,7 +2,7 @@
 
 SCRIPTS_DIRECTORY=$(dirname $0)
 
-rm "$SCRIPTS_DIRECTORY/install-zsh.sh"
+rm -f "$SCRIPTS_DIRECTORY/install-zsh.sh"
 
 # Clone oh-my-zsh. TODO Make script execute as subscript to prevent sudden exit
 {

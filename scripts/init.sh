@@ -3,6 +3,12 @@
 SCRIPTS_DIRECTORY=$(dirname $0)
 
 {
+    ./$SCRIPTS_DIRECTORY/i3.sh
+} || {
+    echo 'i3.sh failed - continuing anyways...'
+}
+
+{
     ./$SCRIPTS_DIRECTORY/git.sh
 } || {
     echo 'git.sh failed - continuing anyways...'
