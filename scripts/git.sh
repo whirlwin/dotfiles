@@ -1,5 +1,7 @@
 #!/bin/sh
 
+ssh-keygen
+
 # Configure global gitignore
 SCRIPT_DIRECTORY=$(dirname $0)
 cp -f "$SCRIPT_DIRECTORY/../.gitignore_global" ~/.gitignore_global
