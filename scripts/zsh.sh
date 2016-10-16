@@ -1,5 +1,7 @@
 #!/bin/sh
 
+SCRIPTS_DIRECTORY=$(dirname $0)
+
 # Clone oh-my-zsh. TODO Make script execute as subscript to prevent sudden exit
 {
     wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O ./install-zsh.sh
@@ -17,4 +19,4 @@
     echo 'info: zsh-syntax-highlighting already cloned - continuing anyways...'
 }
 
-cp -f ../.zshrc ~/
+cp -f "$SCRIPTS_DIRECTORY/../.zshrc" ~/.zshrc
