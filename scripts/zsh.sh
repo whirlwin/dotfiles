@@ -1,11 +1,20 @@
 #!/bin/sh
 
-# Configure zsh
-cp -f ../.zshrc ~/
+# Clone oh-my-zsh. TODO Make script execute as subscript to prevent sudden exit
 {
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
-    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O ./install-zsh.sh
+    chmod +x ./install-zsh.sh
+    command ./install-zsh.sh
 } || {
- echo 'info: zsh-syntax-highlighting already cloned - continuing anyways...'
+    echo 'oh-my-zsh already cloned - continuing...'
 }
 
+# Install zsh-syntax-highlighting
+{
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+} || {
+    echo 'info: zsh-syntax-highlighting already cloned - continuing anyways...'
+}
+
+cp -f ../.zshrc ~/
