@@ -2,6 +2,8 @@
 
 SCRIPTS_DIRECTORY=$(dirname $0)
 
+rm "$SCRIPTS_DIRECTORY/install-zsh.sh"
+
 # Clone oh-my-zsh. TODO Make script execute as subscript to prevent sudden exit
 {
     wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O ./install-zsh.sh

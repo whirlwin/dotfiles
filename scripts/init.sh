@@ -21,6 +21,12 @@ SCRIPTS_DIRECTORY=$(dirname $0)
 }
 
 {
+    ./$SCRIPTS_DIRECTORY/vim.sh
+} || {
+    echo 'vim.sh failed - continuing anyways...'
+}
+
+{
     ./$SCRIPTS_DIRECTORY/zsh.sh
 } || {
     echo 'zsh.sh failed - continuing anyways...'
