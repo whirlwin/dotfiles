@@ -26,10 +26,3 @@ Run: `./init-profile.sh`
 # Misc
 1. Make Guake tab names suck less: `gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false`
 
-## Gnome Shell extensions
-Option 1:
-- [Static workspaces](https://extensions.gnome.org/extension/484/workspace-grid/)
-
-Option 2:
-- [Frippery Bottom Panel](https://extensions.gnome.org/extension/3/bottom-panel/)
-
