@@ -1,6 +1,10 @@
 #!/bin/sh
 
-ssh-keygen
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
+  ssh-keygen
+else
+  echo "~/.ssh/id_rsa.pub already exists. Skipping..."
+fi
 
 echo 'Please type in your name: '
 read NAME
@@ -17,6 +21,9 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --global user.name $NAME
 git config --global user.email $EMAIL
 git config --global core.editor vim
+git config --global core.pager 'less -+F'
 
-echo "SSH key: $(cat ~/.ssh/id_rsa.pub)"
 
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
+  echo "SSH key: $(cat ~/.ssh/id_rsa.pub)"
+fi
