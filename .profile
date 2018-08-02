@@ -13,6 +13,10 @@ up() {
   docker run --interactive --tty $1 bash
 }
 
+killdocker() {
+  docker kill $(docker ps -q)
+}
+
 export EDITOR=vim
 export BROWSER=google-chrome
 
