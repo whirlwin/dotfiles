@@ -22,6 +22,11 @@ echo "[INFO]: Copied neovim config ✅"
 echo "[INFO]: Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
 
+brew install docker docker-machine
+docker-machine create --driver virtualbox default
+docker-machine env default
+eval $(docker-machine env default)
+
 mkdir -p ~/git/open-source
 echo "[INFO]: Created directories: ~/git ~git/open-source ✅"
 
