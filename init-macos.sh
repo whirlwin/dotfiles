@@ -22,6 +22,7 @@ echo "[INFO]: Copied neovim config ✅"
 echo "[INFO]: Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
 
+echo "[INFO]: Setting up Docker"
 brew install docker docker-machine
 docker-machine create --driver virtualbox default
 docker-machine env default
