@@ -1,7 +1,5 @@
 echo "[INFO]: Installing stuff...⚙️️"
 
-set -e
-
 echo "[INFO]: Setting up SSH keypair"
 ssh-keygen -o -a 100 -t ed25519
 
@@ -22,6 +20,9 @@ echo "[INFO]: Copied neovim config ✅"
 echo "[INFO]: Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
 
+echo "[INFO]: Setting up Vagrant"
+brew cask install vagrant
+
 echo "[INFO]: Setting up Docker"
 brew install docker docker-machine
 docker-machine create --driver virtualbox default
@@ -32,4 +33,4 @@ mkdir -p ~/git/open-source
 echo "[INFO]: Created directories: ~/git ~git/open-source ✅"
 
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
-(cd target/path && curl -O https://iterm2.com/downloads/stable/latest)
+curl -O https://iterm2.com/downloads/stable/latest
