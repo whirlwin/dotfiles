@@ -1,7 +1,9 @@
 echo "[INFO]: Installing stuff...⚙️️"
 
-echo "[INFO]: Setting up SSH keypair"
-ssh-keygen -o -a 100 -t ed25519
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+  echo "[INFO]: Setting up SSH keypair 🔑"
+  ssh-keygen -o -a 100 -t ed25519
+fi
 
 echo "[INFO]: Setting Git info"
 git config --global user.name "Øyvind Ødegård"
@@ -32,5 +34,9 @@ eval $(docker-machine env default)
 mkdir -p ~/git/open-source
 echo "[INFO]: Created directories: ~/git ~git/open-source ✅"
 
+echo "[INFO]: Setting up misc 📦"
+brew install watch
+
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
-curl -O https://iterm2.com/downloads/stable/latest
+(cd ~/Downloads && curl -O https://iterm2.com/downloads/stable/latest)
+
