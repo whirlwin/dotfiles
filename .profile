@@ -1,3 +1,4 @@
+alias 'k'='kubectl'
 alias 'untar'='tar xvf'
 alias 'xclip'='xclip -selection clipboard'
 
