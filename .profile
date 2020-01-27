@@ -1,5 +1,7 @@
 alias 'k'='kubectl'
 alias 'untar'='tar xvf'
+alias 'vi'='nvim'
+alias 'vim'='nvim'
 alias 'xclip'='xclip -selection clipboard'
 
 enter() {
