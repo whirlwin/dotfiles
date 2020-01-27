@@ -31,10 +31,13 @@ docker-machine create --driver virtualbox default
 docker-machine env default
 eval $(docker-machine env default)
 
-echo "[INFO]: Creating directories: ~/git ~git/open-source ✅"
+echo "[INFO]: Creating directories: ~/git ~git/open-source"
 mkdir -p ~/git/open-source
 
-echo "[INFO]: Setting up misc 📦"
+echo "[INFO]: Copying .profile"
+cp .profile ~/
+
+echo "[INFO]: Setting up misc"
 brew install watch
 
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
