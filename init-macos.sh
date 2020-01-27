@@ -15,9 +15,9 @@ brew install zsh-syntax-highlighting
 echo "[INFO]: Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "[INFO]: Setting up neovim"
 brew install neovim
 cp -r .nvim ~
-echo "[INFO]: Copied neovim config ✅"
 
 echo "[INFO]: Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
@@ -31,8 +31,8 @@ docker-machine create --driver virtualbox default
 docker-machine env default
 eval $(docker-machine env default)
 
+echo "[INFO]: Creating directories: ~/git ~git/open-source ✅"
 mkdir -p ~/git/open-source
-echo "[INFO]: Created directories: ~/git ~git/open-source ✅"
 
 echo "[INFO]: Setting up misc 📦"
 brew install watch
