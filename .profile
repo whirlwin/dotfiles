@@ -1,4 +1,5 @@
 alias 'k'='kubectl'
+alias 'kns'='kubens'
 alias 'untar'='tar xvf'
 alias 'vi'='nvim'
 alias 'vim'='nvim'
