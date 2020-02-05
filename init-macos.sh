@@ -41,6 +41,7 @@ echo "[INFO]: Setting up misc"
 brew install watch
 brew install htop
 brew install dive
+brew install prometheus
 
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
 (cd ~/Downloads && curl -O https://iterm2.com/downloads/stable/latest)
