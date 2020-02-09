@@ -43,6 +43,7 @@ brew install htop
 brew install dive
 brew install prometheus
 brew install wget
+brew cask install alfred
 
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
 (cd ~/Downloads && curl -O https://iterm2.com/downloads/stable/latest)
