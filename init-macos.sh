@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "[INFO]: Installing stuff...⚙️️"
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
@@ -8,12 +9,12 @@ fi
 echo "[INFO]: Setting Git info"
 git config --global user.name "Øyvind Ødegård"
 
-echo "[INFO]: Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-brew install zsh-syntax-highlighting
-
 echo "[INFO]: Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "[INFO]: Installing oh-my-zsh and plugins"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew install zsh-syntax-highlighting
 
 echo "[INFO]: Setting up neovim"
 brew install neovim
@@ -30,6 +31,10 @@ brew install docker docker-machine
 docker-machine create --driver virtualbox default
 docker-machine env default
 eval $(docker-machine env default)
+
+echo "[INFO]: Setting up helm"
+brew install helm
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 echo "[INFO]: Creating directories: ~/git ~git/open-source"
 mkdir -p ~/git/open-source
