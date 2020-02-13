@@ -46,10 +46,9 @@ echo "[INFO]: Setting up misc"
 brew install watch
 brew install htop
 brew install dive
-brew install prometheus
 brew install wget
 brew install kind
-brew install helm
+brew install kubectx
 brew cask install alfred
 
 echo "[INFO]: Downloading iterm2 zip. Install it manually"
