@@ -44,6 +44,7 @@ cp .profile ~/
 
 echo "[INFO]: Setting up misc"
 brew install watch
+brew install telnet
 brew install htop
 brew install dive
 brew install prometheus
