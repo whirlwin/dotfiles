@@ -16,9 +16,11 @@ mkdir -p ~/git/com.github
 echo "[INFO]: Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-echo "[INFO]: Installing oh-my-zsh and plugins"
+echo "[INFO]: Installing shell stuff"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install zsh-syntax-highlighting
+curl -o ~/.zshrc https://raw.githubusercontent.com/whirlwin/dotfiles/master/.zshrc
+curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
 
 echo "[INFO]: Setting up neovim"
 brew install neovim
@@ -31,6 +33,7 @@ curl -s "https://get.sdkman.io" | bash
 echo "[INFO]: Setting up virtualization"
 brew install --cask vagrant
 brew install --cask virtualbox
+brew install --cask slack
 
 echo "[INFO]: Setting up Docker"
 brew install docker docker-machine
