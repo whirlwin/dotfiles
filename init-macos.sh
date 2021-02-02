@@ -45,8 +45,9 @@ echo "[INFO]: Setting up helm"
 brew install helm
 helm repo add stable https://charts.helm.sh/stable
 
-echo "[INFO]: Downloading .profile"
-curl -o ~/.profile https://github.com/whirlwin/dotfiles/blob/master/.profile
+echo "[INFO]: Downloading user config files"
+curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
+curl -o ~/.gitignore https://github.com/whirlwin/dotfiles/blob/master/.gitignore
 
 echo "[INFO]: Setting up misc"
 brew install watch
