@@ -7,10 +7,11 @@ if [ ! -f ~/.ssh/id_ed25519 ]; then
 fi
 
 echo "[INFO]: Setting Git info"
-git config --global user.name "Øyvind Ødegård"
 echo "[INFO]: Type email address to be used with git:"
 read git_email
 git config --global user.email "$git_email"
+git config --global core.editor "nvim"
+git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/com.github
 
 echo "[INFO]: Installing Homebrew"
