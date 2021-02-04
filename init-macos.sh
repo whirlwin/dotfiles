@@ -49,6 +49,8 @@ helm repo add stable https://charts.helm.sh/stable
 echo "[INFO]: Downloading user config files"
 curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
 curl -o ~/.gitignore https://github.com/whirlwin/dotfiles/blob/master/.gitignore
+curl -o ~/Downloads/iterm2-profile.json https://github.com/whirlwin/dotfiles/blob/master/iterm2-profile.json
+curl -o ~/Downloads/iterm2.itermkeymap https://github.com/whirlwin/dotfiles/blob/master/iterm2.itermkeymap
 
 echo "[INFO]: Setting up misc"
 brew install watch
@@ -63,8 +65,10 @@ brew install --cask alfred
 brew install --cask iterm2
 
 echo "[INFO]: Init script finished!"
-echo "[INFO]: Follow the below instructions to configure macOS settings"
+echo "[INFO]: Follow the below instructions to configure misc stuff:"
 echo "[INFO]: • Add the following SSH public key to github.com: $(cat ~/.ssh/id_ed25519.pub)"
 echo "[INFO]: • Silent system bell: System Preferences -> Sound Effects -> Alert volume = 0"
 echo "[INFO]: • Tap to click: System Preferences -> Trackpad -> Tap to click = enabled"
 echo "[INFO]: • Natural scroll direction: System Preferences -> Trackpad -> Scroll & Zoom -> Scroll direction: Natural = disabled"
+echo "[INFO]: • iTerm2 profile: Open iTerm2 -> Preferences -> Profiles -> Other Actions -> Import JSON Profiles: Select the profile from ~/Downloads"
+echo "[INFO]: • iTerm2 keymap: Open iTerm2 -> Preferences -> Keys -> ⚙ Presets... -> Import...: Select the keymap from ~/Downloads"
