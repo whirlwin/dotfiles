@@ -6,12 +6,16 @@ workbench.
 
 ## macOS
 
-Run `./init-macos.sh`
+```shell
+curl https://raw.githubusercontent.com/whirlwin/dotfiles/master/init-macos.sh | bash
+```
 
 
 ## Linux
 
-Run `./init-linux.sh`
+```shell
+./init-linux.sh
+```
 
 # Misc
 1. Make Guake tab names suck less: `gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false`
