@@ -63,6 +63,7 @@ brew install kubectx
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
+brew install --cask intellij-idea
 
 echo "[INFO]: Init script finished!"
 echo "[INFO]: Follow the below instructions to configure misc stuff:"
