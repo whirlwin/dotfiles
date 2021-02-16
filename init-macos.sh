@@ -23,10 +23,11 @@ brew install zsh-syntax-highlighting
 curl -o ~/.zshrc https://raw.githubusercontent.com/whirlwin/dotfiles/master/.zshrc
 curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
 
-echo "[INFO]: Setting up neovim"
+echo "[INFO]: Setting up editors"
 brew install neovim
 mkdir -p ~/.nvim
 curl -o ~/.nvim/init.vim https://raw.githubusercontent.com/whirlwin/dotfiles/master/.config/nvim/init.vim 
+brew install visual-studio-code
 
 echo "[INFO]: Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
