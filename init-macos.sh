@@ -35,13 +35,13 @@ curl -s "https://get.sdkman.io" | bash
 echo "[INFO]: Setting up virtualization"
 brew install --cask vagrant
 brew install --cask virtualbox
-brew install --cask slack
 
 echo "[INFO]: Setting up Docker"
 brew install docker docker-machine
 docker-machine create --driver virtualbox default
 docker-machine env default
 eval $(docker-machine env default)
+docker-machine start
 
 echo "[INFO]: Setting up helm"
 brew install helm
@@ -66,6 +66,7 @@ brew install --cask alfred
 brew install --cask iterm2
 brew install --cask intellij-idea
 brew install --cask spotify
+brew install --cask slack
 
 echo "[INFO]: Init script finished!"
 echo "[INFO]: Follow the below instructions to configure misc stuff:"
