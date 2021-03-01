@@ -61,6 +61,7 @@ brew install dive
 brew install wget
 brew install kind
 brew install kubectx
+brew install jq
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
