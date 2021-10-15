@@ -62,12 +62,14 @@ brew install wget
 brew install kind
 brew install kubectx
 brew install jq
+brew install yq
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
 brew install --cask intellij-idea
 brew install --cask spotify
 brew install --cask slack
+brew install --cask spectacle
 
 echo "[INFO]: Init script finished!"
 echo "[INFO]: Follow the below instructions to configure misc stuff:"
