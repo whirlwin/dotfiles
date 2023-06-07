@@ -15,13 +15,16 @@ git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/com.github
 
 echo "[INFO] Installing Homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+curl -o install.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+bash install.sh
 
 echo "[INFO] Installing shell stuff"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install zsh-syntax-highlighting
 curl -o ~/.zshrc https://raw.githubusercontent.com/whirlwin/dotfiles/master/.zshrc
+source ~/.zshrc
 curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
+source ~/.profile
 
 echo "[INFO] Setting up editors"
 brew install neovim
@@ -55,6 +58,7 @@ curl -o ~/Downloads/iterm2.itermkeymap https://github.com/whirlwin/dotfiles/blob
 
 echo "[INFO] Setting up misc"
 brew install watch
+brew install fzf
 brew install telnet
 brew install htop
 brew install dive

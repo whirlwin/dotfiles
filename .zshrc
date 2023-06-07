@@ -11,3 +11,5 @@ source $ZSH/oh-my-zsh.sh
 
 export SDKMAN_DIR="/Users/oyvind.odegard/.sdkman"
 [[ -s "/Users/oyvind.odegard/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/oyvind.odegard/.sdkman/bin/sdkman-init.sh"
+
+export PATH="/opt/homebrew/bin:$PATH"
