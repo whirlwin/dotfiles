@@ -57,6 +57,7 @@ brew install telnet
 brew install htop
 brew install dive
 brew install wget
+brew install tig
 brew install kind
 brew install kubectx
 brew install k9s
