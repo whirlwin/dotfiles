@@ -12,7 +12,7 @@ read git_email
 git config --global user.email "$git_email"
 git config --global core.editor "nvim"
 git config --global user.name "Øyvind Ødegård"
-mkdir -p ~/git/com.github
+mkdir -p ~/git/github.com
 
 echo "[INFO] Installing Homebrew"
 curl -o install.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
@@ -50,12 +50,6 @@ echo "[INFO] Setting up helm"
 brew install helm
 helm repo add stable https://charts.helm.sh/stable
 
-echo "[INFO] Downloading user config files"
-curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
-curl -o ~/.gitignore https://github.com/whirlwin/dotfiles/blob/master/.gitignore
-curl -o ~/Downloads/iterm2-profile.json https://github.com/whirlwin/dotfiles/blob/master/iterm2-profile.json
-curl -o ~/Downloads/iterm2.itermkeymap https://github.com/whirlwin/dotfiles/blob/master/iterm2.itermkeymap
-
 echo "[INFO] Setting up misc"
 brew install watch
 brew install fzf
@@ -72,6 +66,8 @@ brew install podman
 brew install podman-desktop
 brew install lima
 brew install autojump
+brew install fonts-powerline
+brew install font-hack-nerd-font
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
@@ -79,6 +75,12 @@ brew install --cask intellij-idea
 brew install --cask spotify
 brew install --cask slack
 brew install --cask spectacle
+
+echo "[INFO] Downloading user config files"
+curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
+curl -o ~/.gitignore https://github.com/whirlwin/dotfiles/blob/master/.gitignore
+curl -o ~/Downloads/iterm2-profile.json https://github.com/whirlwin/dotfiles/blob/master/iterm2-profile.json
+curl -o ~/Downloads/iterm2.itermkeymap https://github.com/whirlwin/dotfiles/blob/master/iterm2.itermkeymap
 
 echo "[INFO] Init script finished!"
 echo "[INFO] Follow the below instructions to configure misc stuff:"
