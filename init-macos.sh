@@ -71,6 +71,7 @@ brew install --cask intellij-idea
 brew install --cask spotify
 brew install --cask slack
 brew install --cask spectacle
+$(brew --prefix)/opt/fzf/install
 
 echo "[INFO] Setting up editors"
 brew install neovim
