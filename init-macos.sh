@@ -26,12 +26,6 @@ source ~/.zshrc
 curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
 source ~/.profile
 
-echo "[INFO] Setting up editors"
-brew install neovim
-mkdir -p ~/.nvim
-curl -o ~/.nvim/init.vim https://raw.githubusercontent.com/whirlwin/dotfiles/master/.config/nvim/init.vim 
-brew install visual-studio-code
-
 echo "[INFO] Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
 
@@ -69,6 +63,7 @@ brew install lima
 brew install autojump
 brew install fonts-powerline
 brew install font-hack-nerd-font
+brew install rust
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
@@ -76,6 +71,13 @@ brew install --cask intellij-idea
 brew install --cask spotify
 brew install --cask slack
 brew install --cask spectacle
+
+echo "[INFO] Setting up editors"
+brew install neovim
+mkdir -p ~/.nvim
+curl -o ~/.nvim/init.vim https://raw.githubusercontent.com/whirlwin/dotfiles/master/.config/nvim/init.vim 
+brew install visual-studio-code
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 echo "[INFO] Downloading user config files"
 curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
