@@ -26,9 +26,6 @@ source ~/.zshrc
 curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
 source ~/.profile
 
-echo "[INFO] Installing sdkman"
-curl -s "https://get.sdkman.io" | bash
-
 echo "[INFO] Setting up virtualization"
 brew install --cask vagrant
 brew install --cask virtualbox
@@ -44,7 +41,9 @@ echo "[INFO] Setting up helm"
 brew install helm
 helm repo add stable https://charts.helm.sh/stable
 
-echo "[INFO] Setting up misc"
+echo "[INFO] Installing packages via Homebrew ⚙️ ..."
+brew tap sdkman/tap
+brew install sdkman-cli
 brew install watch
 brew install fzf
 brew install telnet
