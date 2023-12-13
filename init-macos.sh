@@ -64,6 +64,7 @@ brew install fonts-powerline
 brew install font-hack-nerd-font
 brew install rust
 brew install flycut
+brew install rectangle
 brew install --cask google-chrome
 brew install --cask alfred
 brew install --cask iterm2
