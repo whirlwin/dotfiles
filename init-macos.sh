@@ -66,6 +66,7 @@ brew install rust
 brew install flycut
 brew install rectangle
 brew install --cask google-chrome
+brew install --cask intellij-idea
 brew install --cask alfred
 brew install --cask iterm2
 brew install --cask intellij-idea
