@@ -1,3 +1,4 @@
+alias 'b'='brew'
 alias 'k'='kubectl'
 alias 'kns'='kubens'
 alias 'untar'='tar xvf'
