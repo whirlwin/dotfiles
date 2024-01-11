@@ -10,7 +10,7 @@ echo "[INFO] Setting Git info"
 echo "[INFO] Type email address to be used with git:"
 read git_email
 git config --global user.email "$git_email"
-git config --global core.editor "nvim"
+git config --global core.editor "lvim"
 git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/github.com
 
