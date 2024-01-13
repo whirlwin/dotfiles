@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 echo "[INFO] Installing stuff...⚙️️"
+echo "[INFO] For debuggability, you will be prompted for each install action"
+echo "[INPUT] Proceed with setting up SSH keypair (y)?" && read
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
   echo "[INFO] Setting up SSH keypair"
@@ -14,13 +16,12 @@ git config --global core.editor "lvim"
 git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/github.com
 
-echo "[INFO] Installing Homebrew"
+echo "[INFO] Installing Homebrew. Proceed (y)?" && read
 curl -o install.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 bash install.sh
 
-echo "[INFO] Installing shell stuff"
+echo "[INFO] Installing shell stuff. Proceed(y)?" && read
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-brew install zsh-syntax-highlighting
 curl -o ~/.zshrc https://raw.githubusercontent.com/whirlwin/dotfiles/master/.zshrc
 source ~/.zshrc
 curl -o ~/.profile https://raw.githubusercontent.com/whirlwin/dotfiles/master/.profile
@@ -42,6 +43,7 @@ brew install helm
 helm repo add stable https://charts.helm.sh/stable
 
 echo "[INFO] Installing packages via Homebrew ⚙️ ..."
+brew install zsh-syntax-highlighting
 brew tap sdkman/tap
 brew install sdkman-cli
 brew install watch
