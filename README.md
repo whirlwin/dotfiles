@@ -19,3 +19,8 @@ curl https://raw.githubusercontent.com/whirlwin/dotfiles/master/init-macos.sh | 
 
 # Misc
 1. Make Guake tab names suck less: `gconftool-2 --set /apps/guake/general/use_vte_titles --type boolean false`
+2. Install the following IntelliJ IDEA plugins:
+- Vimium
+- GitHub Copilot
+- Python
+- Go
