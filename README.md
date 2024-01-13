@@ -24,3 +24,6 @@ curl https://raw.githubusercontent.com/whirlwin/dotfiles/master/init-macos.sh | 
 - GitHub Copilot
 - Python
 - Go
+
+# TODO
+- Add prompts before each install. E.g. before all `brew install` commands to improve debugability
