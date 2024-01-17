@@ -1,2 +1,12 @@
--- Use internal register and not system register when deleting/replacing something
-vim.opt.clipboard = nil
+
+vim.opt.mouse = ""
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.wo.list = true
+vim.wo.listchars = "tab:⇥⇥,trail:·"
+
+lvim.plugins = {
+    {"gpanders/editorconfig.nvim"}
+}
+
