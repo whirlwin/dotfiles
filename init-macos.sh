@@ -46,6 +46,7 @@ echo "[INFO] Installing packages via Homebrew ⚙️ ..."
 brew install zsh-syntax-highlighting
 brew tap sdkman/tap
 brew install sdkman-cli
+brew install difftastic
 brew install watch
 brew install fzf
 brew install telnet
@@ -88,6 +89,7 @@ LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 echo "[INFO] Downloading user config files"
 curl -o ~/.editorconfig https://github.com/whirlwin/dotfiles/blob/master/.editorconfig
 curl -o ~/.gitignore https://github.com/whirlwin/dotfiles/blob/master/.gitignore
+curl -o ~/.gitconfig https://github.com/whirlwin/dotfiles/blob/master/.gitconfig
 curl -o ~/Downloads/iterm2-profile.json https://github.com/whirlwin/dotfiles/blob/master/iterm2-profile.json
 curl -o ~/Downloads/iterm2.itermkeymap https://github.com/whirlwin/dotfiles/blob/master/iterm2.itermkeymap
 

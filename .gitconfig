@@ -1,0 +1,18 @@
+[core]
+    editor = lvim
+[user]
+    name = Øyvind Ødegård
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[diff]
+    tool = difftastic
+    external = difft
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
