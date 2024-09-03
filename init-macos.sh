@@ -68,6 +68,7 @@ brew install font-hack-nerd-font
 brew install rust
 brew install flycut
 brew install rectangle
+brew install ripgrep
 brew install --cask google-chrome
 brew install --cask intellij-idea
 brew install --cask alfred
