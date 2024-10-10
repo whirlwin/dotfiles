@@ -2,8 +2,8 @@ alias 'b'='brew'
 alias 'k'='kubectl'
 alias 'kns'='kubens'
 alias 'untar'='tar xvf'
-alias 'vi'='nvim'
-alias 'vim'='nvim'
+alias 'vi'='lvim'
+alias 'vim'='lvim'
 alias 'xclip'='xclip -selection clipboard'
 
 enter() {
