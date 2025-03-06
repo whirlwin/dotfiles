@@ -66,9 +66,11 @@ brew install autojump
 brew install fonts-powerline
 brew install font-hack-nerd-font
 brew install rust
-brew install flycut
+#brew install flycut
+brew install starship
 brew install rectangle
 brew install ripgrep
+brew install --cask maccy
 brew install --cask google-chrome
 brew install --cask intellij-idea
 brew install --cask alfred
