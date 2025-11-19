@@ -16,11 +16,11 @@ git config --global core.editor "lvim"
 git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/github.com
 
-echo "[INFO] Installing Homebrew. Proceed (y)?" && read
+echo "[INFO] Installing Homebrew?"
 curl -o install.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 bash install.sh
 
-echo "[INFO] Installing shell stuff. Proceed(y)?" && read
+echo "[INFO] Installing shell stuff"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 curl -o ~/.zshrc https://raw.githubusercontent.com/whirlwin/dotfiles/master/.zshrc
 source ~/.zshrc
