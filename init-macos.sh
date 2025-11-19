@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "[INFO] Installing stuff...⚙️️"
 echo "[INFO] For debuggability, you will be prompted for each install action"
-echo "[INPUT] Proceed with setting up SSH keypair (y)?" && read
+echo "[INPUT] Proceeding with setting up SSH keypair"
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
   echo "[INFO] Setting up SSH keypair"
@@ -16,7 +16,7 @@ git config --global core.editor "lvim"
 git config --global user.name "Øyvind Ødegård"
 mkdir -p ~/git/github.com
 
-echo "[INFO] Installing Homebrew?"
+echo "[INFO] Installing Homebrew"
 curl -o install.sh -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 bash install.sh
 
