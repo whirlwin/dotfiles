@@ -1,7 +1,7 @@
 [core]
     editor = lvim
 [user]
-    name = Øyvind Ødegård
+	name = Øyvind Ødegård
 [filter "lfs"]
     required = true
     clean = git-lfs clean -- %f
@@ -16,3 +16,9 @@
     cmd = difft "$LOCAL" "$REMOTE"
 [pager]
     difftool = true
+[includeIf "gitdir:~/git/github.com/CatalystOne/"]
+	path = ~/.gitconfig-github-oodegard
+[includeIf "gitdir:~/git/github.com/whirlwin/"]
+	path = ~/.gitconfig-github-whirlwin
+[includeIf "gitdir:~/git/codeberg.org/whirlwin/"]
+	path = ~/.gitconfig-codeberg-whirlwin
