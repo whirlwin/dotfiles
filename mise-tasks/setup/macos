@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Print the remaining manual macOS configuration steps"
+set -euo pipefail
+
+echo "[INFO] Setup finished! Follow the below instructions to configure misc stuff:"
+echo "[INFO] • Add the following SSH public key to github.com: $(cat ~/.ssh/id_ed25519.pub)"
+echo "[INFO] • Silent system bell: System Preferences -> Sound Effects -> Alert volume = 0"
+echo "[INFO] • Tap to click: System Preferences -> Trackpad -> Tap to click = enabled"
+echo "[INFO] • iTerm2 profile: iTerm2 -> Preferences -> Profiles -> Other Actions -> Import JSON Profiles: select from ~/Downloads"
+echo "[INFO] • iTerm2 keymap: iTerm2 -> Preferences -> Keys -> ⚙ Presets... -> Import...: select from ~/Downloads"
+echo "[INFO] • System Settings -> Change profile picture"
+echo "[INFO] • System Preferences -> Trackpad -> Scroll & Zoom -> Scroll direction: Natural = disabled"

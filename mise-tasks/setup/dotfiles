@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Copy editor/iterm2 config files into place from the repo"
+set -euo pipefail
+
+echo "[INFO] Installing user config files"
+cp "$MISE_PROJECT_ROOT/.editorconfig" ~/.editorconfig
+cp "$MISE_PROJECT_ROOT/.gitignore" ~/.gitignore
+
+# iTerm2 profile + keymap are imported manually (see setup:macos).
+cp "$MISE_PROJECT_ROOT/iterm2-profile.json" ~/Downloads/iterm2-profile.json
+cp "$MISE_PROJECT_ROOT/iterm2.itermkeymap" ~/Downloads/iterm2.itermkeymap

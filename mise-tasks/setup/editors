@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Install Neovim config and LunarVim (neovim binary comes from mise)"
+set -euo pipefail
+
+echo "[INFO] Installing Neovim config"
+mkdir -p ~/.nvim
+cp "$MISE_PROJECT_ROOT/.config/nvim/init.vim" ~/.nvim/init.vim
+
+echo "[INFO] Installing LunarVim"
+LV_BRANCH='release-1.3/neovim-0.9' \
+  bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)

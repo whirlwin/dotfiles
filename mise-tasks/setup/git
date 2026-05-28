@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#MISE description="Install .gitconfig (+ identity includes) and set the git email"
+set -euo pipefail
+
+echo "[INFO] Installing git config"
+# Copy .gitconfig and its includeIf identity files first; the email is layered
+# on top afterwards so it survives (the old script overwrote it the other way).
+cp "$MISE_PROJECT_ROOT/.gitconfig" ~/.gitconfig
+cp "$MISE_PROJECT_ROOT/.gitconfig-github-whirlwin" ~/.gitconfig-github-whirlwin
+cp "$MISE_PROJECT_ROOT/.gitconfig-codeberg-whirlwin" ~/.gitconfig-codeberg-whirlwin
+
+echo "[INPUT] Type the email address to use with git:"
+read -r git_email </dev/tty
+git config --global user.email "$git_email"
+
+mkdir -p ~/git/github.com

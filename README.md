@@ -7,8 +7,20 @@ workbench.
 ## macOS
 
 ```shell
-curl https://raw.githubusercontent.com/whirlwin/dotfiles/master/init-macos.sh | bash
+curl -fsSL https://raw.githubusercontent.com/whirlwin/dotfiles/master/init-macos.sh | bash
 ```
+
+`init-macos.sh` installs Homebrew + [mise](https://mise.jdx.dev), clones this
+repo, then runs `mise run setup`. From then on the workstation is managed
+declaratively:
+
+- **`mise.toml`** — runtimes (java, node, rust) and CLI tools (jq, yq, ripgrep,
+  fzf, k9s, kind, kubectx, helm, starship, neovim, dive, difftastic, lima).
+  Install/update with `mise install`.
+- **`Brewfile`** — GUI apps, fonts and system/daemon tools mise can't manage.
+  Install with `brew bundle`.
+- **`mise-tasks/`** — the individual, re-runnable setup steps. List them with
+  `mise tasks ls`; run the whole thing with `mise run setup`.
 
 
 ## Linux

@@ -13,6 +13,7 @@ source ~/.profile
 source $(/opt/homebrew/bin/brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+# mise — runtime & tool version manager (replaces SDKMAN); puts java, node,
+# rust and the mise-managed CLI tools on PATH.
+eval "$(mise activate zsh)"
 

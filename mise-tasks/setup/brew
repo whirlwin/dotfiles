@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Install GUI apps, fonts and system tools from the Brewfile"
+set -euo pipefail
+
+echo "[INFO] Installing Homebrew packages from Brewfile"
+brew bundle --file="$MISE_PROJECT_ROOT/Brewfile"

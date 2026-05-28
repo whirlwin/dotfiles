@@ -1,0 +1,47 @@
+# mise configuration — https://mise.jdx.dev
+#
+# `[tools]` declares the runtimes and CLI tools mise manages (installed with
+# `mise install`). GUI apps, fonts and system/daemon tools that mise can't
+# install live in the Brewfile instead. Setup steps are file tasks under
+# `mise-tasks/` and are orchestrated by the `setup` task below.
+#
+#   mise install        # install everything in [tools]
+#   mise run setup       # full, re-runnable workstation bootstrap
+#   mise tasks ls        # list the individual setup steps
+
+[tools]
+# Language runtimes (java replaces the old SDKMAN setup)
+java = "temurin-21"
+node = "lts"
+rust = "latest"
+
+# CLI tools (previously installed one-by-one via Homebrew)
+jq = "latest"
+yq = "latest"
+ripgrep = "latest"
+fzf = "latest"
+k9s = "latest"
+kind = "latest"
+kubectx = "latest"
+helm = "latest"
+starship = "latest"
+neovim = "latest"
+dive = "latest"
+difftastic = "latest"
+lima = "latest"
+
+[tasks.setup]
+description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
+# An ordered list runs sequentially; each step is a file task in mise-tasks/.
+run = [
+  "mise install",
+  "mise run setup:ssh",
+  "mise run setup:git",
+  "mise run setup:shell",
+  "mise run setup:brew",
+  "mise run setup:docker",
+  "mise run setup:helm",
+  "mise run setup:editors",
+  "mise run setup:dotfiles",
+  "mise run setup:macos",
+]

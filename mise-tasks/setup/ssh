@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Generate an Ed25519 SSH keypair if one doesn't exist"
+set -euo pipefail
+
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+  echo "[INFO] Setting up SSH keypair"
+  ssh-keygen -o -a 100 -t ed25519
+else
+  echo "[INFO] SSH keypair already present, skipping"
+fi

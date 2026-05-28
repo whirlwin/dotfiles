@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#MISE description="Install oh-my-zsh and the .zshrc / .profile shell config"
+set -euo pipefail
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "[INFO] Installing oh-my-zsh"
+  # RUNZSH/KEEP_ZSHRC stop the installer from launching a shell or clobbering
+  # our .zshrc, which we copy in ourselves below.
+  RUNZSH=no KEEP_ZSHRC=yes \
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "[INFO] oh-my-zsh already present, skipping"
+fi
+
+echo "[INFO] Installing shell config"
+cp "$MISE_PROJECT_ROOT/.zshrc" ~/.zshrc
+cp "$MISE_PROJECT_ROOT/.profile" ~/.profile

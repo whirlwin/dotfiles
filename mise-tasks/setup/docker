@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Create and start the default docker-machine VM"
+set -euo pipefail
+
+echo "[INFO] Setting up docker-machine"
+if ! docker-machine ls -q | grep -qx default; then
+  docker-machine create --driver virtualbox default
+fi
+docker-machine start default || true
+eval "$(docker-machine env default)"

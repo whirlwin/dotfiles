@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Add the stable Helm chart repository (helm comes from mise)"
+set -euo pipefail
+
+echo "[INFO] Adding stable helm repo"
+helm repo add stable https://charts.helm.sh/stable
