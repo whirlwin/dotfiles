@@ -17,3 +17,14 @@ source $ZSH/oh-my-zsh.sh
 # rust and the mise-managed CLI tools on PATH.
 eval "$(mise activate zsh)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+
+# kubectl wrapper for the k3s cluster on noravind-hallway-monitor.
+# Cluster API isn't reachable from this laptop, so each command tunnels over SSH.
+# Usage: knvh get nodes / knvh -n kube-system get pods
+knvh() {
+  ssh noravind-hallway-monitor "KUBECONFIG=\$HOME/.kube/config kubectl $*"
+}

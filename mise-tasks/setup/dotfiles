@@ -6,6 +6,12 @@ echo "[INFO] Installing user config files"
 cp "$MISE_PROJECT_ROOT/.editorconfig" ~/.editorconfig
 cp "$MISE_PROJECT_ROOT/.gitignore" ~/.gitignore
 
+# Expose the repo's mise.toml as the global mise config so its [tools] are on
+# PATH in every shell, not just when cwd is inside this repo.
+echo "[INFO] Linking mise.toml as the global mise config"
+mkdir -p ~/.config/mise
+ln -sfn "$MISE_PROJECT_ROOT/mise.toml" ~/.config/mise/config.toml
+
 # iTerm2 profile + keymap are imported manually (see setup:macos).
 cp "$MISE_PROJECT_ROOT/iterm2-profile.json" ~/Downloads/iterm2-profile.json
 cp "$MISE_PROJECT_ROOT/iterm2.itermkeymap" ~/Downloads/iterm2.itermkeymap
