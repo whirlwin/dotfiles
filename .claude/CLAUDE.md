@@ -1,1 +1,1 @@
-See [AGENTS.md](../AGENTS.md) at the repo root for preferences and conventions.
+@../AGENTS.md
