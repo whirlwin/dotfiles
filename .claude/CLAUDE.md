@@ -1,3 +1,1 @@
-# Preferences
-
-- Prefer shell scripting (bash/zsh) over Python for scripting tasks
+See [AGENTS.md](../AGENTS.md) at the repo root for preferences and conventions.
