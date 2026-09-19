@@ -21,6 +21,11 @@ not only to the files that live here.
   with ❌ in plans, replies and PR descriptions so they can't be skimmed past.
   If your change removes or weakens an existing rule or behaviour, say so with
   ❌ rather than letting it disappear quietly in a diff.
+- **Mark anything visual with 👁️.** When a change alters what someone sees
+  (UI components, CSS or layout, theme or icons, CLI output, terminal
+  formatting, rendered docs, generated images and diagrams), flag it with 👁️
+  in plans, replies and PR descriptions, so I know to look at it rather than
+  only read the diff.
 
 ## Technology choices
 
