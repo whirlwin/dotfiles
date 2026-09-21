@@ -33,6 +33,14 @@ lima = "latest"
 # adb isn't in the mise registry, so install Google's official platform-tools
 # zip directly via the http backend (bump the version in both fields to upgrade)
 "http:platform-tools" = { version = "36.0.0", url = "https://dl.google.com/android/repository/platform-tools_r36.0.0-darwin.zip", bin_path = "platform-tools" }
+actionlint = "latest"
+azure-cli = "latest"
+doctl = "latest"
+gh = "latest"
+kubectl = "latest"
+kustomize = "latest"
+supabase = "latest"
+uv = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
