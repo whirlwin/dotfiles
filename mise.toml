@@ -42,6 +42,7 @@ kustomize = "latest"
 supabase = "latest"
 uv = "latest"
 stripe = "latest"
+nomad = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
