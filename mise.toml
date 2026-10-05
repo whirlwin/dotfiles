@@ -44,6 +44,7 @@ uv = "latest"
 stripe = "latest"
 nomad = "latest"
 "github:microsoft/go-sqlcmd" = "latest"
+shellcheck = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
