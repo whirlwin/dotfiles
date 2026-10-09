@@ -45,6 +45,8 @@ stripe = "latest"
 nomad = "latest"
 "github:microsoft/go-sqlcmd" = "latest"
 shellcheck = "latest"
+"aqua:grafana/alloy" = "latest"
+claude = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
