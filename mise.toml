@@ -47,6 +47,8 @@ nomad = "latest"
 shellcheck = "latest"
 "aqua:grafana/alloy" = "latest"
 claude = "latest"
+"aqua:cloudflare/cloudflared" = "latest"
+"aqua:kyverno/kyverno" = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
