@@ -51,6 +51,7 @@ claude = "latest"
 "aqua:kyverno/kyverno" = "latest"
 "github:modelcontextprotocol/registry" = "latest"
 gitleaks = "latest"
+"aqua:grafana/gcx" = "latest"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
