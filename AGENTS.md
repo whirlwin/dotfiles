@@ -1,8 +1,10 @@
-# Agent instructions for this repo
+# Agent instructions
 
-Personal preferences and conventions for AI agents working in this repository.
-The writing conventions below apply to every reply and every file you produce,
-not only to the files that live here.
+My personal preferences for AI agents, wherever they work. The writing
+conventions below apply to every reply and every file you produce. To apply
+the whole file in every Claude Code session, `@`-import its absolute path from
+`~/.claude/CLAUDE.md`; copying it there instead lets the two drift apart.
+Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
 
 ## How I want you to write
 
@@ -39,8 +41,8 @@ not only to the files that live here.
 
 ## How I like work done
 
-- **Plan before implementing.** This repo defaults to plan mode
-  (`.claude/settings.json`). Present the plan and get approval before editing.
+- **Plan before implementing.** Present the plan and get approval before
+  editing.
 - **When executing an approved implementation plan, use subagent-driven
   development**, a fresh subagent per task with a spec and a quality review,
   unless I say otherwise.
@@ -54,20 +56,3 @@ not only to the files that live here.
   genuinely needs my terminal (interactive logins, MFA prompts).
 - **Stay in the current session.** Don't quit and start a fresh Claude session
   to pick up a skill or reset context; continue where we are.
-
-## Repo conventions
-
-This repo is a declarative macOS workstation setup. Keep the three layers
-distinct:
-
-- **`mise.toml`**: language runtimes and CLI tools mise manages.
-- **`Brewfile`**: GUI apps, fonts, and system/daemon tools mise can't install.
-- **`mise-tasks/setup/*`**: individual, idempotent, re-runnable setup steps,
-  orchestrated by `mise run setup`.
-
-Every setup step must be safe to re-run. Keep `README.md` in step with changes
-to any of the three.
-
-Commit subjects: short, imperative, sentence case, no conventional-commit
-prefix, matching existing history ("Add adb via mise and make mise.toml the
-global config").
