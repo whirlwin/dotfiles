@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#MISE description="Make iTerm2 restore its windows and tabs after a reboot"
+set -euo pipefail
+
+# iTerm2 3.7 only writes its own restore database (~/Library/Application
+# Support/iTerm2/SavedState) while macOS window restoration is on for it, i.e.
+# "Close windows when quitting an application" is off. Scoping the key to
+# iTerm2's domain leaves other apps alone.
+echo "[INFO] Enabling window restoration for iTerm2"
+defaults write com.googlecode.iterm2 NSQuitAlwaysKeepsWindows -bool true
+
+# A login item makes iTerm2 relaunch after a reboot even if the restart
+# dialog's "Reopen windows" box is unchecked.
+if [[ ! -d /Applications/iTerm.app ]]; then
+  echo "[INFO] /Applications/iTerm.app is not installed, skipping the login item"
+elif osascript -e 'tell application "System Events" to get the name of every login item' | grep -qw "iTerm"; then
+  echo "[INFO] iTerm2 is already a login item"
+else
+  echo "[INFO] Adding iTerm2 as a login item"
+  osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/iTerm.app", hidden:false}' >/dev/null
+fi

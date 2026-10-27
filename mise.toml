@@ -66,5 +66,6 @@ run = [
   "mise run setup:helm",
   "mise run setup:editors",
   "mise run setup:dotfiles",
+  "mise run setup:iterm2",
   "mise run setup:macos",
 ]
