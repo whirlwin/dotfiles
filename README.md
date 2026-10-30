@@ -15,7 +15,8 @@ repo, then runs `mise run setup`. From then on the workstation is managed
 declaratively:
 
 - **`mise.toml`** — runtimes (java, node, rust) and CLI tools (jq, yq, ripgrep,
-  fzf, k9s, kind, kubectx, helm, starship, neovim, dive, difftastic, lima).
+  fzf, k9s, kind, kubectx, helm, starship, neovim, dive, difftastic, lima,
+  opencode).
   Install/update with `mise install`.
 - **`Brewfile`** — GUI apps, fonts and system/daemon tools mise can't manage.
   Install with `brew bundle`.
