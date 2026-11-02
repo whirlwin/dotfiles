@@ -19,6 +19,14 @@ eval "$(mise activate zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Claude Code with a chosen model. --model applies to that session only;
+# a plain `claude` still uses the "model" default in ~/.claude/settings.json.
+# Extra args pass through: `sonnet -p "..."`, `opus --resume`.
+alias fable='claude --model fable'
+alias opus='claude --model opus'
+alias sonnet='claude --model sonnet'
+alias haiku='claude --model haiku'
+
 # kubectl wrapper for the k3s cluster on noravind-hallway-monitor.
 # Cluster API isn't reachable from this laptop, so each command tunnels over SSH.
 # Usage: knvh get nodes / knvh -n kube-system get pods
