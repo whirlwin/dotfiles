@@ -77,8 +77,12 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
 - Prefer shell scripting (bash/zsh) and CLI utilities over Python for scripting
   tasks.
 
-## Scheduling
+## Time and scheduling
 
+- **Use CET by default.** Show, read and enter times in CET (the
+  `Europe/Oslo` zone, so CEST in summer) unless I name another zone. Convert
+  UTC timestamps from logs, APIs and CI before showing them, and label the
+  zone when it could be ambiguous.
 - **Book meetings between 09:30 and 15:00.** When booking a meeting, always
   try to place it between 09:30 and 15:00 (Oslo time) first, and only go
   outside that window if nothing fits there.
