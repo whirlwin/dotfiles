@@ -28,6 +28,23 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
   formatting, rendered docs, generated images and diagrams), flag it with 👁️
   in plans, replies and PR descriptions, so I know to look at it rather than
   only read the diff.
+- **Give every PR status badges.** Whenever a session or skill mentions a
+  pull request, link it (`[repo#123](url)`) and follow it with badges for its
+  current state, so I can see at a glance what it needs. Read the state fresh
+  (`gh pr view --json state,isDraft,reviewDecision,mergeStateStatus,statusCheckRollup`,
+  plus `reviewThreads` through `gh api graphql` for unresolved threads)
+  rather than from memory, and show only the badges that apply:
+  - State: `🟢 open`, `📝 draft`, `🟣 merged`, `⚫ closed`.
+  - Review: `✅ approved`, `✋ changes requested`, `⏳ waiting for approval`,
+    `🙋 needs reviewers` (no review requested), `➖ no review required`.
+  - Activity: `💬 N new comments` (comments or unresolved threads from others
+    since my last commit or reply), `🔄 behind main`, `⚠️ conflicts`.
+  - Checks: `🔴 checks failing`, `🟡 checks running`.
+
+  Example: `[owner/repo#42](url) 🟢 open · ⏳ waiting for approval · 💬 2 new comments`.
+  This covers replies, plans, summaries and chat messages. In Slack and
+  plain text keep the same emoji and words. A badge you could not read is
+  left out and said so, never guessed.
 
 ## Technology choices
 
@@ -38,6 +55,12 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
 - Prefer open standards and portable solutions; avoid vendor lock-in.
 - Prefer shell scripting (bash/zsh) and CLI utilities over Python for scripting
   tasks.
+
+## Scheduling
+
+- **Book meetings between 09:30 and 15:00.** When booking a meeting, always
+  try to place it between 09:30 and 15:00 (Oslo time) first, and only go
+  outside that window if nothing fits there.
 
 ## How I like work done
 
