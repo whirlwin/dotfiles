@@ -55,11 +55,13 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
     `⚠️ conflicts`. Checks: `🔴 checks failing`, `🟡 checks running`.
 
   Read it fresh rather than from memory:
-  `gh pr view --json state,isDraft,headRefOid,reviewDecision,latestReviews,reviewRequests,comments,mergeStateStatus,statusCheckRollup`
-  (an approval is stale when its `commit.oid` differs from `headRefOid`, or
-  its state is `DISMISSED`), plus `reviewThreads` with `isResolved` and each
-  thread's last comment author through `gh api graphql` for unanswered
-  threads. This covers replies, plans and summaries. Where a table can't
+  `gh pr view --json state,isDraft,reviewDecision,reviewRequests,comments,mergeStateStatus,statusCheckRollup`,
+  plus `gh api graphql` for `headRefOid`,
+  `latestReviews { nodes { state author { login } commit { oid } } }` and
+  `reviewThreads { nodes { isResolved comments(last: 1) { nodes { author { login } } } } }`.
+  `gh pr view` returns review commits empty, so staleness needs GraphQL: an
+  approval is stale when its `commit.oid` differs from `headRefOid`, or its
+  state is `DISMISSED`. This covers replies, plans and summaries. Where a table can't
   render (Slack, Teams, plain text, a commit body), fall back to one line
   per PR with the same emoji and words:
   `[owner/repo#42](url) 🟢 open · approvers ✅ alice 🥀 carol ⏳ bob · 🥀 approval stale · 💬 2 unanswered`.
