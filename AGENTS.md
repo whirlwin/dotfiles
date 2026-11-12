@@ -35,29 +35,34 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
 
   | PR | State | Approvers | Status |
   |----|-------|-----------|--------|
-  | [owner/repo#42](url) | 🟢 open | ✅ alice · ⏳ bob | ⏳ waiting for approval · 💬 2 new comments · 🟡 checks running |
+  | [owner/repo#42](url) | 🟢 open | ✅ alice · 🥀 carol (stale) · ⏳ bob | 🥀 approval stale · 💬 2 unanswered · 🟡 checks running |
 
   - **PR**: the link, `[repo#123](url)`.
   - **State**: `🟢 open`, `📝 draft`, `🟣 merged`, `⚫ closed`.
   - **Approvers**: every reviewer by GitHub login without an `@`, marked
-    `✅` approved, `✋` changes requested, `💬` commented only, or `⏳`
-    requested and not yet reviewed (a team request shows the team name).
-    Write `🙋 none requested` when nobody is, and `➖` when no review is
-    required.
+    `✅` approved on the current head commit, `🥀 (stale)` approved on an
+    older commit (or approval dismissed by a push), `✋` changes requested,
+    `💬` commented only, or `⏳` requested and not yet reviewed (a team
+    request shows the team name). Write `🙋 none requested` when nobody is,
+    and `➖` when no review is required.
   - **Status**: the badges that apply, joined with ` · `. Review:
-    `✅ approved`, `✋ changes requested`, `⏳ waiting for approval`,
-    `🙋 needs reviewers`, `➖ no review required`. Activity:
-    `💬 N new comments` (comments or unresolved threads from others since my
-    last commit or reply), `🔄 behind main`, `⚠️ conflicts`. Checks:
-    `🔴 checks failing`, `🟡 checks running`.
+    `✅ approved`, `🥀 approval stale` (commits pushed after the last
+    approval, so it needs a re-approve before merge), `✋ changes requested`,
+    `⏳ waiting for approval`, `🙋 needs reviewers`, `➖ no review required`.
+    Activity: `💬 N unanswered` (review threads still unresolved whose last
+    comment is from someone else, plus PR comments and review bodies from
+    others with no reply from me after them), `🔄 behind main`,
+    `⚠️ conflicts`. Checks: `🔴 checks failing`, `🟡 checks running`.
 
   Read it fresh rather than from memory:
-  `gh pr view --json state,isDraft,reviewDecision,latestReviews,reviewRequests,mergeStateStatus,statusCheckRollup`,
-  plus `reviewThreads` through `gh api graphql` for unresolved threads. This
-  covers replies, plans and summaries. Where a table can't render (Slack,
-  Teams, plain text, a commit body), fall back to one line per PR with the
-  same emoji and words:
-  `[owner/repo#42](url) 🟢 open · approvers ✅ alice ⏳ bob · ⏳ waiting for approval`.
+  `gh pr view --json state,isDraft,headRefOid,reviewDecision,latestReviews,reviewRequests,comments,mergeStateStatus,statusCheckRollup`
+  (an approval is stale when its `commit.oid` differs from `headRefOid`, or
+  its state is `DISMISSED`), plus `reviewThreads` with `isResolved` and each
+  thread's last comment author through `gh api graphql` for unanswered
+  threads. This covers replies, plans and summaries. Where a table can't
+  render (Slack, Teams, plain text, a commit body), fall back to one line
+  per PR with the same emoji and words:
+  `[owner/repo#42](url) 🟢 open · approvers ✅ alice 🥀 carol ⏳ bob · 🥀 approval stale · 💬 2 unanswered`.
   A cell you could not read is left as `?` and said so, never guessed.
 
 ## Technology choices
