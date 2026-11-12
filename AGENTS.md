@@ -28,23 +28,37 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
   formatting, rendered docs, generated images and diagrams), flag it with 👁️
   in plans, replies and PR descriptions, so I know to look at it rather than
   only read the diff.
-- **Give every PR status badges.** Whenever a session or skill mentions a
-  pull request, link it (`[repo#123](url)`) and follow it with badges for its
-  current state, so I can see at a glance what it needs. Read the state fresh
-  (`gh pr view --json state,isDraft,reviewDecision,mergeStateStatus,statusCheckRollup`,
-  plus `reviewThreads` through `gh api graphql` for unresolved threads)
-  rather than from memory, and show only the badges that apply:
-  - State: `🟢 open`, `📝 draft`, `🟣 merged`, `⚫ closed`.
-  - Review: `✅ approved`, `✋ changes requested`, `⏳ waiting for approval`,
-    `🙋 needs reviewers` (no review requested), `➖ no review required`.
-  - Activity: `💬 N new comments` (comments or unresolved threads from others
-    since my last commit or reply), `🔄 behind main`, `⚠️ conflicts`.
-  - Checks: `🔴 checks failing`, `🟡 checks running`.
+- **Show every PR in a status table.** Whenever a session or skill mentions
+  a pull request, show it as a row in a Markdown table, so I can see at a
+  glance who has approved it and what it still needs. Use one table for all
+  the PRs in a reply, with these columns:
 
-  Example: `[owner/repo#42](url) 🟢 open · ⏳ waiting for approval · 💬 2 new comments`.
-  This covers replies, plans, summaries and chat messages. In Slack and
-  plain text keep the same emoji and words. A badge you could not read is
-  left out and said so, never guessed.
+  | PR | State | Approvers | Status |
+  |----|-------|-----------|--------|
+  | [owner/repo#42](url) | 🟢 open | ✅ alice · ⏳ bob | ⏳ waiting for approval · 💬 2 new comments · 🟡 checks running |
+
+  - **PR**: the link, `[repo#123](url)`.
+  - **State**: `🟢 open`, `📝 draft`, `🟣 merged`, `⚫ closed`.
+  - **Approvers**: every reviewer by GitHub login without an `@`, marked
+    `✅` approved, `✋` changes requested, `💬` commented only, or `⏳`
+    requested and not yet reviewed (a team request shows the team name).
+    Write `🙋 none requested` when nobody is, and `➖` when no review is
+    required.
+  - **Status**: the badges that apply, joined with ` · `. Review:
+    `✅ approved`, `✋ changes requested`, `⏳ waiting for approval`,
+    `🙋 needs reviewers`, `➖ no review required`. Activity:
+    `💬 N new comments` (comments or unresolved threads from others since my
+    last commit or reply), `🔄 behind main`, `⚠️ conflicts`. Checks:
+    `🔴 checks failing`, `🟡 checks running`.
+
+  Read it fresh rather than from memory:
+  `gh pr view --json state,isDraft,reviewDecision,latestReviews,reviewRequests,mergeStateStatus,statusCheckRollup`,
+  plus `reviewThreads` through `gh api graphql` for unresolved threads. This
+  covers replies, plans and summaries. Where a table can't render (Slack,
+  Teams, plain text, a commit body), fall back to one line per PR with the
+  same emoji and words:
+  `[owner/repo#42](url) 🟢 open · approvers ✅ alice ⏳ bob · ⏳ waiting for approval`.
+  A cell you could not read is left as `?` and said so, never guessed.
 
 ## Technology choices
 
