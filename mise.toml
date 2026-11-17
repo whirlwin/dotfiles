@@ -55,6 +55,8 @@ shellcheck = "latest"
 "aqua:kyverno/kyverno" = "latest"
 "github:modelcontextprotocol/registry" = "latest"
 gitleaks = "latest"
+"go:tailscale.com/cmd/tailscale" = "v1.104.7"
+"go:tailscale.com/cmd/tailscaled" = "v1.104.7"
 
 [tasks.setup]
 description = "Bootstrap a macOS workstation end-to-end (idempotent, re-runnable)"
