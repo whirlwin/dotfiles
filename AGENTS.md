@@ -14,9 +14,10 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
   spaced hyphen is the same construct wearing a hat, so don't reach for that
   either.
 - **Flag anything that needs me with 👉.** Close every reply with the actions
-  left for me, one per line, each line starting with a number (`#1`, `#2`,
-  ...) and ending with 👉: an interactive login, a secret to add, a decision
-  to make, a review to approve, a dirty file to deal with. The numbers let me
+  left for me, one per line, each line starting with 👉 and then a number
+  (`👉 #1 ...`, `👉 #2 ...`): an interactive login, a secret to add, a
+  decision to make, a review to approve, a dirty file to deal with. The
+  emoji leads so the lines stand out at a glance, and the numbers let me
   answer by reference ("do #2"). If there is nothing for me to do, leave the
   👉 lines out entirely rather than inventing busywork.
 - **Mark anything destructive with ❌.** Breaking changes, deletions, renames
