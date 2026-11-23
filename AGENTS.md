@@ -107,6 +107,12 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
   Claude in Chrome plugin (`mcp__claude-in-chrome__*`) instead of handing me
   click-by-click steps. Only fall back to me for what the browser can't do for
   you, such as an MFA prompt or a login.
+- **Leave shared container VMs running.** The podman machine (and Docker
+  Desktop) is shared by every project on this Mac, including a kind cluster
+  that other sessions rely on. Never run `podman machine stop`, `podman
+  machine rm`, `podman system reset` or quit Docker to tidy up; remove only
+  the containers, images and networks you created yourself. Starting a
+  stopped machine is fine.
 - **Run the commands yourself.** Don't hand me a command to paste unless it
   genuinely needs my terminal (interactive logins, MFA prompts).
 - **Stay in the current session.** Don't quit and start a fresh Claude session
