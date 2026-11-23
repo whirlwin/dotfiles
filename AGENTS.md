@@ -102,6 +102,11 @@ Conventions for this dotfiles repo itself live in `.claude/CLAUDE.md`.
 - **Keep unrelated changes out of my commits.** Stage the files your change
   touches, never `git commit -a`. If the tree holds work I started, leave it
   alone and flag it with 👉.
+- **Do the browser clicking yourself.** When a change needs someone to click
+  through a web page (a portal setting, an admin UI, a form), do it with the
+  Claude in Chrome plugin (`mcp__claude-in-chrome__*`) instead of handing me
+  click-by-click steps. Only fall back to me for what the browser can't do for
+  you, such as an MFA prompt or a login.
 - **Run the commands yourself.** Don't hand me a command to paste unless it
   genuinely needs my terminal (interactive logins, MFA prompts).
 - **Stay in the current session.** Don't quit and start a fresh Claude session
